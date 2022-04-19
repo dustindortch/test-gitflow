@@ -1,0 +1,16 @@
+name: Workflow for main branch pull requests
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+
+    name: Hello world action
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Identify main
+        run: echo "main merge"
